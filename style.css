@@ -1,0 +1,289 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 30px 15px;
+  font-family: 'Merriweather', serif;
+  background: linear-gradient(135deg, #e9ecff 0%, #f5f7ff 50%, #eef2ff 100%);
+  color: #1f2333;
+  line-height: 1.6;
+}
+
+h1, h2, h3, .tagline {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== Resume container ===== */
+
+.resume-container {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 0px 40px rgba(30, 30, 90, 0.15); 
+  overflow: hidden;
+}
+
+/* ===== Header ===== */
+.header {
+  background: linear-gradient(120deg ,#1a28eb , #13137d);
+  color: #ffffff;
+  padding: 35px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+   
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: 2.1rem;
+  letter-spacing: 1px;
+  animation : titleglow 3s ease-in-out infinite alternate ;
+}
+
+.tagline {
+  margin: 6px 0 14px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  animation : taglineglow 4s ease-in-out infinite alternate ;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: 0.9rem;
+  margin: 0;
+  animation : contactglow 5s ease-in-out infinite alternate ;
+}
+
+@keyframes titleglow {
+
+  0%{
+    text-shadow:
+      0 0 5px #00F5FF,
+      0 0 10px #00F5FF;
+  }
+
+  100%{
+    text-shadow:
+      0 0 12px #00F5FF,
+      0 0 25px #00F5FF,
+      0 0 40px #00F5FF;
+  }
+
+}
+
+@keyframes taglineglow {
+
+  0%{
+    text-shadow:
+      0 0 5px    #38BDF8,
+      0 0 10px   #38BDF8;
+  }
+
+  100%{
+    text-shadow:
+      0 0 10px   #38BDF8,
+      0 0 20px   #38BDF8;
+  }
+
+}
+
+@keyframes contactglow {
+
+  0%{
+    text-shadow:
+      0 0 2px #38BDF8;
+  }
+
+  100%{
+    text-shadow:
+      0 0 8px #38BDF8,
+      0 0 15px #38BDF8;
+  }
+
+}
+
+.profile-photo img {
+  height: 200px;
+  width: 150px;
+  object-fit : cover;
+  border-radius: 10px 10px 10px 10px;
+  border: 4px solid  #f2f2fc;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  animation:glow 2s infinite;
+}
+
+
+ @keyframes glow {
+    from {
+        box-shadow: 0 0 5px   #f2f2fc,
+                    0 0 10px  #f2f2fc;
+    }
+
+
+} 
+
+/* ===== Sections ===== */
+.section {
+  padding: 25px 35px;
+  border-bottom: 1px solid #eef0fa;
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.section h2 {
+  color: #13137d;
+  font-size: 1.3rem;
+  margin: 0 0 15px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #3b3bb3;
+  display: inline-block;
+}
+
+.objective {
+  font-style: italic;
+  color: #3a3f55;
+  background: #f5f6ff;
+  padding: 15px 20px;
+  border-left: 4px solid #1a28eb;
+  border-radius: 6px;
+}
+
+/* ===== Table ===== */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.92rem;
+  min-width: 600px;
+}
+
+thead tr {
+  background: #1a28eb;
+  color: #ffffff;
+}
+
+th, td {
+  padding: 10px 14px;
+  text-align: left;
+  border: 1px solid #d6d9f5;
+}
+
+
+/* ===== Chips (skills) ===== */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  background: #eef0ff;
+  color: #13137d;
+  padding: 7px 16px;
+  border-radius: 10px 10px 10px 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  border: 1px solid #ccd2f7;
+}
+
+
+/* ===== Lists ===== */
+
+/*Here Lists refers to the top bullet points such as _ Carrer objective , Education Qualification , Technical Skills ,Projects , Reports , Achievements , Strengths , Declarations*/
+.styled-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.styled-list li {
+  margin-bottom: 8px;
+}
+
+.nested-list {
+  margin-top: 8px;
+  padding-left: 20px;
+}
+
+/* ===== Report cards ===== */
+
+.report-card {
+  background: #f9faff;
+  border: 1px solid #e4e7fa;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+}
+
+.report-card h3 {
+  margin: 0 0 10px;
+  color: #3b3bb3;
+  font-size: 1.05rem;
+}
+
+/* ===== Declaration ===== */
+.declaration p {
+  color: black;
+}
+
+/* ===== Responsive breakpoints ===== */
+@media (max-width: 700px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .contact-info {
+    justify-content: center;
+  }
+
+  .section {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .profile-photo img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .section h2 {
+    font-size: 1.1rem;
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+}
+
+/* ===== Print friendly ===== */
+
+@media print {
+  body {
+    background: #ffffff;
+    padding: 0;
+  }
+  .resume-container {
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
